@@ -1,0 +1,65 @@
+
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Form</title>
+        <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+        <script type='text/javascript' src='script.js'></script>
+        
+    </head>
+    <body>
+        <div id="header">
+        <div id="div_left">
+        <h1>HTML Layout and Forms, JavaScript validation and AJAX</h1> 
+        </div>  
+        <div id="div_right">
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#"><b>Register</b></a></li>
+        <li><a href="#">About</a></li>
+        </ul>
+        </div>
+        </div>                 
+        <div id="bodyContainer">
+        <div id="right">
+        <p>This is the html form for user registration. User must specify firstname,lastname, gender,birthday, email
+        and occupation. All fields except middlename and occupation are obligatory, gender must be specified. Correctness of
+         all field fillings must be checked with Javascript. Displays correctly in Mozilla firefox.</p>  <br/>
+        
+        </div>
+            <div id="left">
+                <form name="input" action="#" method="post" onSubmit="return validateFormOnSubmit(this)">
+                <fieldset>
+                <legend> User Register Information </legend>
+            	    <label>*First name: </label> <input type="text" size="60px" name="firstname" placeholder="first name" id="firstname"><br/>
+            	    <label>*Last name:</label> <input type="text" size="60px" name="lastname" placeholder="Last Name" id="lastname"><br/>
+            	    <label>&nbsp;Middle name:</label> <input type="text" size="60px" name="middlename" placeholder="middle name" id="middlename"><br/>
+            	    <label>*Birthday:</label> <input type="text" size="60px" placeholder = "birthday" name="birthday" id="birthday"><br/>
+            	    <label>*E-mail:</label> <input type="text" size="60px" name="email" placeholder="email address" maxlength="35" id ="email"><br/> 
+            	   <label> *Sex: </label>
+                    <input type="radio" name="sex" value="male" id= "malebutton">Male
+                    <input type="radio" name="sex" value="female" id="femalebutton">Female <br/>
+            	    <label>Occupation: </label><input id="spellcheckinput" onkeyup="getjs(this.value);" type="text" size="60px" name="occupation" placeholder="Occupation(job position)"> <span id="spellcheckresult"></span> <br/><br/> 
+                    <input type="submit" value="Submit">
+                </fieldset>      	               	    
+                </form>
+                <div id="required_fields">
+                <p> *Required </p> <br/>
+            
+                <div id="invalid_1"></div> 
+                <div id="invalid_2"></div>
+                <div id="invalid_3"></div>
+                <div id="invalid_4"></div>
+                <div id="invalid_5"></div>
+                <div id="invalid_6"></div>
+              
+                <div id="invalid_7"></div>
+                </div>     
+        </div>
+        <div id="footer">
+          <div id="div_footer">
+            <p>Copyright©2013 Olabode Obe</p>
+          </div>
+        </div>
+    </body>
+</html>
